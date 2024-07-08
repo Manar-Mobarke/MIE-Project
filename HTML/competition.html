@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font Awesome links -->
-    <link rel="stylesheet" href="../Awesome/all.css">
-    <link rel="stylesheet" href="../Awesome/fontawesome.css">
-    <link rel="stylesheet" href="../CSS/competition"/>
+    <link rel="stylesheet" href="../Awesome/all.css" />
+    <link rel="stylesheet" href="../Awesome/fontawesome.css" />
+    <link rel="stylesheet" href="../CSS/competition" />
     <style>
       /* colors 
         White (#FFFFFF)
@@ -35,7 +35,8 @@
       body {
         font-family: "Roboto", sans-serif;
         background-color: var(--offWhite);
-        background: url('../Images/website\ pattern-03.svg') no-repeat center center fixed;
+        background: url("../Images/website\ pattern-03.svg") no-repeat center
+          center fixed;
         background-size: cover;
       }
 
@@ -43,7 +44,7 @@
         scroll-behavior: smooth;
       }
 
-    /* .overlay {
+      /* .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -53,138 +54,141 @@
     z-index: 1;
 } */
 
-header{
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding-bottom: 20px;
-    background: rgba(38, 37, 37, 0.815);
-}
+      header {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-bottom: 20px;
+        background: rgba(38, 37, 37, 0.815);
+      }
 
-nav{
-    width: 100%;
-    /* padding: 0 20px; */
-    background-color: #fff;
-}
-nav div .nav-container{
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo img{
-    height: 50px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-}
-
-.nav-links li{
-    margin: 0;
-}
-
-.nav-links li a{
-    color: #242323;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.nav-links li a:hover{
-    /* background: #e91e63; */
-    color: #a33131;
-    /* border-radius: 5px; */
-    /* border-right: 1.5px solid #a33131; */
-}
-
-
-nav input{
-    padding: .5em 1.5em;
-    margin-right: .4em;
-    border: none;
-    border-radius: 27em;
-    font-weight: 600;
-    background-color: white;
-    color:rgb(197, 22, 22);
-    border: rgba(212, 60, 60, 0.39) solid 0.3px;
-    /* box-shadow: rgba(128, 128, 128, 0.699) 1px 1px 5px ; */
-}
-
-nav input:hover{
-    color: white;
-    background-image:repeating-linear-gradient(to right,rgba(197, 22, 22, 0.822),rgb(143, 95, 95));
-    
-}
-
-.landing {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
-    text-align: center;
-}
-
-.landing-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.landing-text {
-    margin-top: 20px;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.landing-text h1 {
-    font-size: 56px;
-    margin: 0;
-}
-
-.landing-text p{
-    font-size: 28px;
-    margin: 10px 0;
-}
-
-@media (min-width: 768px) {
-    .nav-container {
+      nav {
+        width: 100%;
+        /* padding: 0 20px; */
+        background-color: #fff;
+      }
+      nav div .nav-container {
+        width: 80%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-    }
-    nav ul {
-        gap: 20px;
-    }
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-    .landing {
-        flex-direction: row;
-        justify-content: space-between;
-        /* text-align: left; */
-    }
-    .landing-image img{
-        height: 350px;
-    }
-    .landing-image, .landing-text {
-        flex: 1;
-        margin: 0 20px;
-    }
-    .landing-text {
-        margin-top: 0;
+      .logo img {
+        height: 50px;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
         padding: 0;
-    }
-}
+        gap: 20px;
+      }
+
+      .nav-links li {
+        margin: 0;
+      }
+
+      .nav-links li a {
+        color: #242323;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .nav-links li a:hover {
+        /* background: #e91e63; */
+        color: #a33131;
+        /* border-radius: 5px; */
+        /* border-right: 1.5px solid #a33131; */
+      }
+
+      nav input {
+        padding: 0.5em 1.5em;
+        margin-right: 0.4em;
+        border: none;
+        border-radius: 27em;
+        font-weight: 600;
+        background-color: white;
+        color: rgb(197, 22, 22);
+        border: rgba(212, 60, 60, 0.39) solid 0.3px;
+        /* box-shadow: rgba(128, 128, 128, 0.699) 1px 1px 5px ; */
+      }
+
+      nav input:hover {
+        color: white;
+        background-image: repeating-linear-gradient(
+          to right,
+          rgba(197, 22, 22, 0.822),
+          rgb(143, 95, 95)
+        );
+      }
+
+      .landing {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+        text-align: center;
+      }
+
+      .landing-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .landing-text {
+        margin-top: 20px;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .landing-text h1 {
+        font-size: 56px;
+        margin: 0;
+      }
+
+      .landing-text p {
+        font-size: 28px;
+        margin: 10px 0;
+      }
+
+      @media (min-width: 768px) {
+        .nav-container {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        nav ul {
+          gap: 20px;
+        }
+
+        .landing {
+          flex-direction: row;
+          justify-content: space-between;
+          /* text-align: left; */
+        }
+        .landing-image img {
+          height: 350px;
+        }
+        .landing-image,
+        .landing-text {
+          flex: 1;
+          margin: 0 20px;
+        }
+        .landing-text {
+          margin-top: 0;
+          padding: 0;
+        }
+      }
 
       .main {
         position: relative;
@@ -351,101 +355,100 @@ nav input:hover{
         font-size: 3ch;
       }
 
-      <!-- footer-->
-      footer{
-        font-family: 'Helvetica Neue', Arial, sans-serif;
+      <!-- footer-- > footer {
+        font-family: "Helvetica Neue", Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
         color: #333;
-    }
+      }
 
-    .footer {
+      .footer {
         background-color: #333;
         color: #fff;
         padding: 40px 0;
-    }
+      }
 
-    .footer-container {
+      .footer-container {
         width: 90%;
         max-width: 1200px;
         margin: auto;
-    }
+      }
 
-    .footer-row {
+      .footer-row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
+      }
 
-    .footer-column {
+      .footer-column {
         flex: 1 1 calc(25% - 20px);
         margin: 10px;
-    }
+      }
 
-    .footer-column h3 {
+      .footer-column h3 {
         font-size: 1.5em;
         margin-bottom: 20px;
-    }
+      }
 
-    .footer-column p, .footer-column ul {
+      .footer-column p,
+      .footer-column ul {
         font-size: 1em;
         margin: 0;
         line-height: 1.6;
-    }
+      }
 
-    .footer-column ul {
+      .footer-column ul {
         list-style: none;
         padding: 0;
-    }
+      }
 
-    .footer-column ul li {
+      .footer-column ul li {
         margin-bottom: 10px;
-    }
+      }
 
-    .footer-column ul li a {
+      .footer-column ul li a {
         color: #fff;
         text-decoration: none;
-    }
+      }
 
-    .footer-column ul li a:hover {
+      .footer-column ul li a:hover {
         text-decoration: underline;
-    }
+      }
 
-    .social-links a {
+      .social-links a {
         display: inline-block;
         margin-right: 10px;
         color: #fff;
         font-size: 1.5em;
-    }
+      }
 
-    .social-links a:hover {
+      .social-links a:hover {
         color: #007bff;
-    }
+      }
 
-    .footer-bottom {
+      .footer-bottom {
         text-align: center;
         margin-top: 20px;
-    }
+      }
 
-    .footer-bottom p {
+      .footer-bottom p {
         margin: 0;
         font-size: 1em;
         color: #bbb;
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .footer-column {
-            flex: 1 1 calc(50% - 20px);
+          flex: 1 1 calc(50% - 20px);
         }
-    }
+      }
 
-    @media (max-width: 480px) {
+      @media (max-width: 480px) {
         .footer-column {
-            flex: 1 1 100%;
+          flex: 1 1 100%;
         }
-    }
-
+      }
     </style>
     <title>Competition</title>
   </head>
@@ -453,32 +456,50 @@ nav input:hover{
     <div class="overlay"></div>
     <!-- =========header========= -->
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="../Images/MIE-logo.png" alt="Logo">
-                </div>
-                <ul class="nav-links">
-                  <li><a href="../HTML/home.html" data-page="home.html">Home</a></li>
-                  <li><a href="../HTML/about.html" data-page="../HTML/about.html">About Us</a></li>
-                  <li><a href="../HTML/competition.html" data-page="../HTML/competition.html">Competition</a></li>
-                  <li><a href="../HTML/projects.html" data-page="../HTML/projects.html">Projects</a></li>
-                  <li><a href="../HTML/contact.html" data-page="../HTML/contact.html">Contact Us</a></li>
-                </ul>
-                <div class="nav__button" id="nav-button">
-                    <input type="submit" value="Registration">
-                </div>
-            </div>
-        </nav>
-        
-        <div class="landing">
-            <div class="landing-text">
-                <h1>Competition.</h1>
-            </div>
-            <div class="landing-image">
-              <img src="../Images/ssssdff.png" alt="Landing Image">
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="../Images/MIE-logo.png" alt="Logo" />
+          </div>
+          <ul class="nav-links">
+            <li><a href="../HTML/home.html" data-page="home.html">Home</a></li>
+            <li>
+              <a href="../HTML/about.html" data-page="../HTML/about.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="../HTML/competition.html"
+                data-page="../HTML/competition.html"
+                >Competition</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/projects.html" data-page="../HTML/projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/contact.html" data-page="../HTML/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="nav__button" id="nav-button">
+            <input type="submit" value="Registration" />
           </div>
         </div>
+      </nav>
+
+      <div class="landing">
+        <div class="landing-text">
+          <h1>Competition.</h1>
+        </div>
+        <div class="landing-image">
+          <img src="../Images/ssssdff.png" alt="Landing Image" />
+        </div>
+      </div>
     </header>
 
     <!-- using BEM class naming -->
@@ -685,45 +706,72 @@ nav input:hover{
     <!-- footer -->
     <footer class="footer">
       <div class="footer-container">
-          <div class="footer-row">
-              <div class="footer-column">
-                  <h3>About Us</h3>
-                  <p>MIE was founded in 2006, and over the years we have sustained our theme to provide graduation projects, but we have also developed the theme criteria, which is the tracks of every season. We ensure that the tracks are scoped with the year held, and with this sustainability, we have reached every country in Egypt.</p>
-              </div>
-              <div class="footer-column">
-                  <h3>Contact Us</h3>
-                  <ul>
-                      <li>Email: mie@ieeeypegypt.org</li>
-                      <li>Phone: +123 456 7890</li>
-                      <li>Address: 123 Street Name, City, Country</li>
-                  </ul>
-              </div>
-              <div class="footer-column">
-                  <h3>Quick Links</h3>
-                  <ul>
-                      <li><a href="../HTML/home.html">Home</a></li>
-                      <li><a href="../HTML/about.html">About</a></li>
-                      <li><a href="../HTML/competition.html">Competition</a></li>
-                      <li><a href="../HTML/projects.html">Projects</a></li>
-                      <li><a href="../HTML/contact.html">Contact</a></li>
-                  </ul>
-              </div>
-              <div class="footer-column">
-                  <h3>Follow Us</h3>
-                  <div class="social-links">
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  </div>
-              </div>
+        <div class="footer-row">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              MIE was founded in 2006, and over the years we have sustained our
+              theme to provide graduation projects, but we have also developed
+              the theme criteria, which is the tracks of every season. We ensure
+              that the tracks are scoped with the year held, and with this
+              sustainability, we have reached every country in Egypt.
+            </p>
           </div>
-          <div class="footer-bottom">
-              <p>&copy; MIE'24 All Rights Reserved.</p>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: mie@ieeeypegypt.org</li>
+              <li>Phone: +123 456 7890</li>
+              <li>Address: 123 Street Name, City, Country</li>
+            </ul>
           </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../HTML/home.html">Home</a></li>
+              <li><a href="../HTML/about.html">About</a></li>
+              <li><a href="../HTML/competition.html">Competition</a></li>
+              <li><a href="../HTML/projects.html">Projects</a></li>
+              <li><a href="../HTML/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/facebook.png"
+                  alt="facebook"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/instagram.png"
+                  alt="instagram"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; MIE'24 All Rights Reserved.</p>
+        </div>
       </div>
-  </footer>
+    </footer>
 
-  <!-- Font Awesome CDN for social media icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Font Awesome CDN for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>
