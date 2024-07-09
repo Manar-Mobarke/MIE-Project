@@ -6,13 +6,11 @@
     <title>Document</title>
     <style>
       body {
+        color: #000 !important;
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
       }
       form {
@@ -20,6 +18,13 @@
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      div.main {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       input,
       textarea {
@@ -78,9 +83,57 @@
         xhr.send(formData);
       }
     </script>
-      <script src="../main.js" defer></script>
+    <script src="../main.js" defer></script>
+    <link rel="stylesheet" href="../CSS/about.css" />
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="../Images/MIE-logo.png" alt="Logo" />
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="../HTML/home.html" data-page="../HTML/home.html">Home</a>
+            </li>
+            <li>
+              <a href="../HTML/about.html" data-page="../HTML/about.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="../HTML/competition.html"
+                data-page="../HTML/competition.html"
+                >Competition</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/projects.html" data-page="../HTML/projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/contact.html" data-page="../HTML/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="nav__button" id="nav-button">
+            <input type="submit" value="Registration" />
+          </div>
+        </div>
+      </nav>
+      <div class="landing">
+        <!-- <div class="landing-image">
+                <img src="../Images/ssssdff.png" alt="Landing Image">
+            </div> -->
+        <div class="landing-text">
+          <h1>PROJECTS.</h1>
+        </div>
+      </div>
+    </header>
     <!-- form title "Project form" -->
     <div class="main">
       <h1>Project form</h1>
@@ -94,7 +147,7 @@
       >
         <label for="name">Project name:</label>
         <input type="text" name="name" id="name" placeholder="Name" />
-        
+
         <label for="description">Project description:</label>
         <textarea
           type="text"
@@ -103,10 +156,10 @@
           placeholder="Description"
         >
         </textarea>
-        
+
         <label for="image">Project image:</label>
         <input type="file" name="image" id="image" placeholder="Image" />
-        
+
         <button type="submit">Submit</button>
       </form>
     </div>
