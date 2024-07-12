@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/eed2015/mie/
+    - /bin/cp -R images $DEPLOYPATH
