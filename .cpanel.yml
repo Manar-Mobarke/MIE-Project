@@ -5,3 +5,4 @@ deployment:
     - /bin/cp -R HTML $DEPLOYPATH
     - /bin/cp -R CSS $DEPLOYPATH
     - /bin/cp -R Img $DEPLOYPATH
+    - /bin/cp main.js $DEPLOYPATH
