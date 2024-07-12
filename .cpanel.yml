@@ -4,4 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/eed2015/mie/
     - /bin/cp -R HTML $DEPLOYPATH
     - /bin/cp -R CSS $DEPLOYPATH
-    - /bin/cp -R IMG $DEPLOYPATH
+    - /bin/cp -R Img $DEPLOYPATH
