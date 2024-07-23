@@ -1,0 +1,17 @@
+# بص هو مش محتاج ملف دوكر اعمل رن للسطر ده بس
+# well... it does not really need any docker files. just run this command
+
+# docker run --name postgres-db -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+
+
+
+# FROM postgres
+# ENV POSTGRES_PASSWORD docker
+# ENV POSTGRES_DB world
+# COPY world.sql /docker-entrypoint-initdb.d/
+
+# Host: localhost
+# Port: 5432
+# User: postgres
+# Password: docker
