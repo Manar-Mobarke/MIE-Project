@@ -2,3 +2,5 @@
 
 
 __pycache__/
+backend/project/__pycache__/
+backend/project_form/__pycache__/

@@ -10,7 +10,7 @@ router = routers.SimpleRouter()
 router.register("project-form", ProjectFormAPI, basename="project-form")
 urlpatterns = [
     path("", include(router.urls)),
-    path('home', views.home),
+    path('', views.home),
     path('about', views.about),
     path('contact', views.contact),
     path('projects', views.projects),

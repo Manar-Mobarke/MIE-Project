@@ -20,5 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('project_form.urls')),
     path('', include('Contact.urls')),
-    path('front/', include('front.urls')),
 ]
