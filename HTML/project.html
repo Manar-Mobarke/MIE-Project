@@ -3,95 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        color: #000 !important;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-      }
-      form {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-      }
-      div.main {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-
-      .main {
-        width: 50%;
-      }
-    </style>
-    <script>
-      document.documentElement.className = "js";
-
-      var supportsCssVars = function () {
-        var e,
-          t = document.createElement("style");
-        return (
-          (t.innerHTML = "root: { --tmp-var: bold; }"),
-          document.head.appendChild(t),
-          (e = !!(
-            window.CSS &&
-            window.CSS.supports &&
-            window.CSS.supports("font-weight", "var(--tmp-var)")
-          )),
-          t.parentNode.removeChild(t),
-          e
-        );
-      };
-      supportsCssVars() || alert("");
-
-      function submitForm() {
-        var form = document.getElementById("ajax-form");
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", form.action, true);
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            console.log(xhr.responseText);
-          }
-        };
-        xhr.send(formData);
-      }
-    </script>
+    <link rel="stylesheet" href="../CSS/projects.css" />
+    <title>Projects</title>
     <script src="../main.js" defer></script>
-    <link rel="stylesheet" href="../CSS/about.css" />
   </head>
   <body>
+    <!-- =========header========= -->
     <header>
       <nav>
         <div class="nav-container">
           <div class="logo">
-            <img src="../Images/MIE-logo.png" alt="Logo" />
+            <img src="../Img/MIE-logo.png" alt="Logo" />
           </div>
           <ul class="nav-links">
             <li>
@@ -100,13 +22,6 @@
             <li>
               <a href="../HTML/about.html" data-page="../HTML/about.html"
                 >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                href="../HTML/competition.html"
-                data-page="../HTML/competition.html"
-                >Competition</a
               >
             </li>
             <li>
@@ -126,51 +41,133 @@
         </div>
       </nav>
       <div class="landing">
-        <!-- <div class="landing-image">
-                <img src="../Images/ssssdff.png" alt="Landing Image">
-            </div> -->
         <div class="landing-text">
           <h1>PROJECTS.</h1>
         </div>
       </div>
     </header>
-    <!-- form title "Project form" -->
-    <div class="main">
-      <h1>Project form</h1>
-      <form
-        onsubmit="event.preventDefault(); submitForm();"
-        action="http://127.0.0.1:8000/project-form/"
-        name="ajax-form"
-        id="ajax-form"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <label for="name">Project name:</label>
-        <input type="text" name="name" id="name" placeholder="Name" />
+    <!-- ==========projects=========== -->
+    <section class="projects">
+      <div id="projects-container">
+        <div class="project-sec">
+          <div class="img">
+            <img src="../Img/4152.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>Automation</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime,
+              dicta animi quas repellat nemo atque tempore ducimus consectetur!
+              Esse quis quidem dolores est fugit, sequi vitae minus officiis
+              itaque voluptate.
+            </p>
+          </div>
+        </div>
+        <div class="project-sec">
+          <div class="img">
+            <img src="../Img/4152.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>Automation</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime,
+              dicta animi quas repellat nemo atque tempore ducimus consectetur!
+              Esse quis quidem dolores est fugit, sequi vitae minus officiis
+              itaque voluptate.
+            </p>
+          </div>
+        </div>
+        <div class="project-sec">
+          <div class="img">
+            <img src="../Img/4152.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>Automation</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime,
+              dicta animi quas repellat nemo atque tempore ducimus consectetur!
+              Esse quis quidem dolores est fugit, sequi vitae minus officiis
+              itaque voluptate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <label for="description">Project description:</label>
-        <textarea
-          type="text"
-          name="description"
-          id="description"
-          placeholder="Description"
-        >
-        </textarea>
-
-        <label for="image">Project image:</label>
-        <input type="file" name="image" id="image" placeholder="Image" />
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-
-    <!-- JAVASCRIPT
-================================================== -->
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/popper.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/contact.js" defer></script>
-    <!-- End Document
-================================================== -->
+    <!-- ==========Footer========= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              MIE was founded in 2006, and over the years we have sustained our
+              theme to provide graduation projects, but we have also developed
+              the theme criteria, which is the tracks of every season. We ensure
+              that the tracks are scoped with the year held, and with this
+              sustainability, we have reached every country in Egypt.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: contact@company.com</li>
+              <li>Phone: +123 456 7890</li>
+              <li>Address: 123 Street Name, City, Country</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../HTML/home.html">Home</a></li>
+              <li><a href="../HTML/about.html">About</a></li>
+              <li><a href="../HTML/competition.html">Competition</a></li>
+              <li><a href="../HTML/projects.html">Projects</a></li>
+              <li><a href="../HTML/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/facebook.png"
+                  alt="facebook"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/instagram.png"
+                  alt="instagram"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; MIE'24 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- =========End Footer======= -->
+    <!-- js link -->
+    <script src="../JS/scripts.js"></script>
+    <!-- Font Awesome CDN for social media icons -->
+    <script
+      src="https://kit.fontawesome.com/ad6b76df31.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
