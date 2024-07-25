@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/about.css" />
-    <title>About Us</title>
-    <script src="../main.js" defer></script>
+    <!-- Font Awesome links -->
+    <link rel="stylesheet" href="../Awesome/all.css" />
+    <link rel="stylesheet" href="../Awesome/fontawesome.css" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../CSS/contact.css" />
+      <script src="../main.js" defer></script>
   </head>
   <body>
-    <!--============Header============= -->
     <header>
-      <nav id="nav-placeholder">
+      <nav>
         <div class="nav-container">
           <div class="logo">
-            <img src="../Images/MIE-logo.png" alt="Logo" />
+            <img src="../Img/MIE-logo.png" alt="Logo" />
           </div>
           <ul class="nav-links">
             <li>
@@ -22,13 +24,6 @@
             <li>
               <a href="../HTML/about.html" data-page="../HTML/about.html"
                 >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                href="../HTML/competition.html"
-                data-page="../HTML/competition.html"
-                >Competition</a
               >
             </li>
             <li>
@@ -50,47 +45,29 @@
 
       <div class="landing">
         <div class="landing-text">
-          <h1>About Us.</h1>
-          <p></p>
+          <h1>Contact Us</h1>
         </div>
       </div>
     </header>
-
-    <!-- main -->
-    <main>
-      <section>
-        <div class="mie">
-          <h1>Made In Egypt</h1>
-          <p>
-            It was founded in 2006, where students from all over the Egyptian
-            engineering universities compete with their peers with their
-            graduation projects. The target is to bring the best out of them so
-            they are able and ready to convert their graduation projects into
-            their startups by connecting them with the business approaches
-            besides the technical ones.
-          </p>
-        </div>
-      </section>
-      <section>
-        <div>
-          <div class="mission">
-            <div class="icon"></div>
-            <h2>Mission</h2>
-            <p>
-              To be the leading force in fostering innovation within engineering
-              'Made in Egypt' aims to inspire and equip a generation of senior
-              students with the creativity and excellence to exceed market
-              expectations
-            </p>
+    <div class="container">
+      <div class="form-container">
+        <h3>Get in touch</h3>
+        <form action="#" method="post">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name *" required />
+            
+            <input type="email" name="email" placeholder="E-Mail *" required />
           </div>
-          <div class="vision">
-            <div class="icon"></div>
-            <h2>Vision</h2>
-            <p></p>
+          <div class="form-group">
+            <textarea
+              name="message"
+              placeholder="Tell Us Everything"
+            ></textarea>
           </div>
-        </div>
-      </section>
-    </main>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
     <!-- =============Footer============ -->
     <footer class="footer">
@@ -120,7 +97,7 @@
               <li><a href="../HTML/home.html">Home</a></li>
               <li><a href="../HTML/about.html">About</a></li>
               <li><a href="../HTML/competition.html">Competition</a></li>
-              <li><a href="../HTML/projects.html">Projects</a></li>
+              <li><a href="../HTML/competition.html">Projects</a></li>
               <li><a href="../HTML/contact.html">Contact</a></li>
             </ul>
           </div>
