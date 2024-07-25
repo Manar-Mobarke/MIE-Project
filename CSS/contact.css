@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: url('../Images/website\ pattern-03.svg') no-repeat center center fixed;
+    background: url('../Img/website\ pattern-03.svg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
 }
@@ -149,7 +149,6 @@ nav input:hover{
     padding: 40px 20px;
 }
 
-
 .content {
     text-align: center;
     margin: 40px 0;
@@ -169,7 +168,7 @@ nav input:hover{
 .form-container {
     width: 100%;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.974);
     color: #000;
     padding: 40px;
     border-radius: 10px;
@@ -181,6 +180,7 @@ nav input:hover{
     text-align: center;
     font-size: 28px;
     margin-bottom: 30px;
+    color: #a33131;
 }
 
 .form-group {
