@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <!-- Font Awesome links -->
+    <link rel="stylesheet" href="../Awesome/all.css">
+    <link rel="stylesheet" href="../Awesome/fontawesome.css">
+    <title>About Us</title>
+    <script src="../main.js" defer></script>
+  </head>
+  <body>
+    <!--============Header============= -->
+    <header>
+      <nav id="nav-placeholder">
+        <div class="nav-container">
+          <div class="logo">
+            <img src="{% static 'img/MIE-logo.png' %}" alt="Logo" />
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="/front" data-page="./front">Home</a>
+            </li>
+            <li>
+              <a href="./about" data-page="../about"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="./projects" data-page="../projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="./contact" data-page="../contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="nav__button" id="nav-button">
+            <input type="submit" value="Registration" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="landing">
+        <div class="landing-text">
+          <h1>About Us.</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section>
+        <div class="mie">
+          <h1>Made In Egypt</h1>
+          <p>
+            It was founded in 2006, where students from all over the Egyptian
+            engineering universities compete with their peers with their
+            graduation projects. The target is to bring the best out of them so
+            they are able and ready to convert their graduation projects into
+            their startups by connecting them with the business approaches
+            besides the technical ones.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="mission">
+            <div class="icon"><i class="fas fa-bullseye"></i></div>
+            <h2>Mission</h2>
+            <p>
+              To be the leading force in fostering innovation within engineering
+              'Made in Egypt' aims to inspire and equip a generation of senior
+              students with the creativity and excellence to exceed market
+              expectations
+            </p>
+          </div>
+          <div class="vision">
+            <div class="icon"><i class="fa-solid fa-eye"></i></div>
+            <h2>Vision</h2>
+            <p>To be the leading force in fostering innovation within engineering 'Made in Egypt' aims to inspire and equip a generation of senior students with the creativity and excellence to exceed market expectations</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="egypt_section">
+        <div class="ieee">
+          <div class="text">
+            <h2>IEEE</h2>
+            <p>IEEE is the Institute of Electrical and Electronics Engineers. It's a non-profit organization Built by a group of engineers who recognized the importance of spreading knowledge and technology in the world</p>
+          </div>
+          <div class="img">
+            <img src="{% static 'img/IEEE YP.png' %}"$3>
+          </div>
+        </div>
+        <div class="ieee_yp">
+          <div class="img">
+            <img src="{% static 'img/IEEE YP.png' %}"$3>
+          </div>
+          <div class="text">
+            <h2>IEEE Young Professionals</h2>
+            <p>IEEE is an IEEE affinity group that encourages the participation of young engineers in promoting the engineering community, fosters real communication between the university and the industry, and enhances the skills needed for better performance in the professional world. YP started in Egypt in 2002, and thanks to its fast and confident growth, it is now one of the most active affinity groups in IEEE Region 8, which includes Europe, Africa, and Middle East.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="meet_our_board">
+        <div id="meet_our_board">
+          <div class="text">
+            <h1>MEET OUR BOARD.</h1>
+          </div>
+          <div class="leads">
+            <div class="lead">
+              <img src="{% static 'img/Lead/Seif Mostafa.jpeg' %}"$3>
+              <h2>Seif Mostafa</h2>
+              <p>MIE Chairman</p>
+              <div class="icon">
+                <a href="#"
+                  ><img
+                    src="../Img/socail icons/linkedin.png"
+                    alt="linkedin"
+                    style="filter: brightness(100) grayscale(1) invert(1)"
+                /></a>
+              </div>
+            </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Mohamed Fahmy.jpeg' %}"$3>
+            <h2>Mohmed Fahmy</h2>
+            <p>MIE Vice Chairman</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Mahmoud elbahrawy.jpeg' %}"$3>
+            <h2>Mahmoud elbahrawy</h2>
+            <p>Treasurer</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Ziad.jpeg' %}"$3>
+            <h2>Ziad Nasser </h2>
+            <p>Secretary</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Seif Mostafa.jpeg' %}"$3>
+            <h2>Sara Jakoub</h2>
+            <p>Sponsorship Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Eman.jpeg' %}"$3>
+            <h2>Eman Elsharkawy</h2>
+            <p>Operations and Materials Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/WhatsApp Image 2024-02-18 at 1.37.57 PM.jpeg' %}"$3>
+            <h2>Ahmed Ezzat </h2>
+            <p>Registration Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/IMG-20230626-WA0140 - Alaa Kamal.jpg' %}"$3>
+            <h2>Alaa Kamal</h2>
+            <p>Competition Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Abdelrahman.jpeg' %}"$3>
+            <h2>Abdelrahman Sepaey</h2>
+            <p>HR Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Nour Basel.jpg' %}"$3>
+            <h2>Nour Basel</h2>
+            <p>Multimedia Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Omar Alsaqaan.jpeg' %}"$3>
+            <h2>Omar Elsaqaan</h2>
+            <p>PR Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          <div class="lead">
+            <img src="{% static 'img/Lead/Mahmoud Rafaat.jpeg' %}"$3>
+            <h2>Mahmoud Raafat</h2>
+            <p>Marketing Lead</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
+    <!-- =============Footer============ -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              MIE was founded in 2006, and over the years we have sustained our
+              theme to provide graduation projects, but we have also developed
+              the theme criteria, which is the tracks of every season. We ensure
+              that the tracks are scoped with the year held, and with this
+              sustainability, we have reached every country in Egypt.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: mie@ieeeypegypt.org</li>
+              <li>Phone: +123 456 7890</li>
+              <li>Address: 123 Street Name, City, Country</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/front">Home</a></li>
+              <li><a href="./about">About</a></li>
+              <li><a href="./competition">Competition</a></li>
+              <li><a href="./projects">Projects</a></li>
+              <li><a href="./contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"
+                  ><img
+                    height="30"
+                    width="30"
+                    src="{% static 'img/socail icons/facebook.png' %}"
+                    alt="facebook"
+                    style="filter: brightness(100) grayscale(1) invert(1)"
+                /></a>
+                <a href="#"
+                  ><img
+                    height="30"
+                    width="30"
+                    src="{% static 'img/socail icons/instagram.png' %}"
+                    alt="instagram"
+                    style="filter: brightness(100) grayscale(1) invert(1)"
+                /></a>
+                <a href="#"
+                  ><img
+                    height="30"
+                    width="30"
+                    src="{% static 'img/socail icons/linkedin.png' %}"
+                    alt="linkedin"
+                    style="filter: brightness(100) grayscale(1) invert(1)"
+                /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; MIE'24 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ===============End Footer================ -->
+
+    <!-- Font Awesome CDN for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>

@@ -7,7 +7,7 @@
     <!-- Font Awesome links -->
     <link rel="stylesheet" href="../Awesome/all.css" />
     <link rel="stylesheet" href="../Awesome/fontawesome.css" />
-    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <script src="../main.js" defer></script>
     <title>Home</title>
     
@@ -21,7 +21,7 @@
                     <img src="{% static 'img/MIE-logo.png' %}" alt="Logo">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="/front" data-page="./front">Home</a></li>
+                    <li><a href="." data-page="./front">Home</a></li>
                     <li><a href="./about" data-page="../about">About Us</a></li>
                     <li><a href="./projects" data-page="../projects">Projects</a></li>
                     <li><a href="./contact" data-page="../contact">Contact Us</a></li>
@@ -291,7 +291,7 @@
                   ><img
                     height="30"
                     width="30"
-                    src="../Img/socail icons/facebook.png"
+                    src="{% static 'img/socail icons/facebook.png' %}"
                     alt="facebook"
                     style="filter: brightness(100) grayscale(1) invert(1)"
                 /></a>
@@ -299,7 +299,7 @@
                   ><img
                     height="30"
                     width="30"
-                    src="../Img/socail icons/instagram.png"
+                    src="{% static 'img/socail icons/instagram.png' %}"
                     alt="instagram"
                     style="filter: brightness(100) grayscale(1) invert(1)"
                 /></a>
@@ -307,7 +307,7 @@
                   ><img
                     height="30"
                     width="30"
-                    src="../Img/socail icons/linkedin.png"
+                    src="{% static 'img/socail icons/linkedin.png' %}"
                     alt="linkedin"
                     style="filter: brightness(100) grayscale(1) invert(1)"
                 /></a>
