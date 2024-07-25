@@ -33,7 +33,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'front', 'static'),
+    # os.path.join(BASE_DIR, 'front', 'static'),
+    os.path.join(BASE_DIR, 'project_form', 'static'),
 ]
 
 
@@ -49,7 +50,7 @@ INSTALLED_APPS = [
     'project_form.apps.ProjectFormConfig',
     'Contact.apps.ContactConfig',
     'rest_framework',
-    'front'
+    # 'front'
 ]
 
 MIDDLEWARE = [

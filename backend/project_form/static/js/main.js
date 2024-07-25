@@ -22,6 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("nav-button").addEventListener("click", () => {
-  // navigate to the page ./project.html
-  window.location.href = "./project.html";
+  window.location.href = "./registration";
 });

@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/Registration.css">
+    <link rel="stylesheet" href="{% static 'css/Registration.css' %}">
     <title>Registration</title>
     <script>
       document.documentElement.className = "js";
@@ -27,19 +27,50 @@
       supportsCssVars() || alert("");
 
       function submitForm() {
-        var form = document.getElementById("ajax-form");
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", form.action, true);
-        xhr.onload = function () {
-          if (xhr.status === 200) {
+    var form = document.getElementById("ajax-form");
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action, true);
+    
+    // Get the CSRF token from the cookie
+    var csrftoken = getCookie('csrftoken');
+    
+    // Set the CSRF token in the header
+    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+    
+    xhr.onload = function () {
+        if (xhr.status === 200) {
             console.log(xhr.responseText);
-          }
-        };
-        xhr.send(formData);
-      }
+            // Handle successful response
+        } else {
+            console.error("Error submitting form:", xhr.statusText);
+            // Handle error
+        }
+    };
+    xhr.onerror = function() {
+        console.error("Network error occurred");
+        // Handle network error
+    };
+    xhr.send(formData);
+}
+
+// Function to get CSRF token from cookie
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
     </script>
-    <script src="../main.js" defer></script>
+    <script src="{%static 'js/main.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/about.css' %}" />
   </head>
   <body>
@@ -51,7 +82,7 @@
           </div>
           <ul class="nav-links">
             <li>
-              <a href="/front" data-page="./front">Home</a>
+              <a href="/home" data-page="./front">Home</a>
             </li>
             <li>
               <a href="./about" data-page="../about"
@@ -93,6 +124,7 @@
         method="post"
         enctype="multipart/form-data"
       >
+      {% csrf_token %}
         <label for="name">Project name:</label>
         <input type="text" name="name" id="name" placeholder="Name" />
 
@@ -137,7 +169,7 @@
               <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                  <li><a href="/front">Home</a></li>
+                  <li><a href="/home">Home</a></li>
                   <li><a href="./about">About</a></li>
                   <li><a href="./competition">Competition</a></li>
                   <li><a href="./projects">Projects</a></li>
