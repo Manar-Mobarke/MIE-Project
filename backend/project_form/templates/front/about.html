@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/about.css" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
     <!-- Font Awesome links -->
-    <link rel="stylesheet" href="../Awesome/all.css">
-    <link rel="stylesheet" href="../Awesome/fontawesome.css">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
     <title>About Us</title>
-    <!-- <script src="{%static 'js/main.js' %}" defer></script> -->
-    <script src="../main.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
   </head>
   <body>
     <!--============Header============= -->
@@ -17,20 +18,20 @@
       <nav id="nav-placeholder">
         <div class="nav-container">
           <div class="logo">
-            <img src="../Img/MIE-logo.png" alt="Logo" />
+            <img src="{% static 'img/MIE-logo.png' %}" alt="Logo" />
           </div>
-          <ul class="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li>
-              <a href="../HTML/home.html" data-page="../HTML/home.html">Home</a>
+              <a href="/" data-page="/">Home</a>
             </li>
             <li>
-              <a href="../HTML/about.html" data-page="../HTML/about.html">About Us</a>
+              <a href="../about" data-page="../about">About Us</a>
             </li>
             <li>
-              <a href="../HTML/projects.html" data-page="../HTML/projects.html">Projects</a>
+              <a href="../projects" data-page="../projects">Projects</a>
             </li>
             <li>
-              <a href="../HTML/contact.html" data-page="../HTML/contact.html">Contact Us</a>
+              <a href="../contact" data-page="../contact">Contact Us</a>
             </li>
           </ul>
           <div class="nav__button" id="nav-button">
@@ -43,14 +44,13 @@
           </div>
         </div>
       </nav>
-    
+
       <div class="landing">
         <div class="landing-text">
           <h1>About Us.</h1>
         </div>
       </div>
     </header>
-    
 
     <!-- main -->
     <main>
@@ -72,20 +72,34 @@
         <div class="ieee">
           <div class="text">
             <h2>IEEE</h2>
-            <p>IEEE is the Institute of Electrical and Electronics Engineers. It's a non-profit organization Built by a group of engineers who recognized the importance of spreading knowledge and technology in the world</p>
+            <p>
+              IEEE is the Institute of Electrical and Electronics Engineers.
+              It's a non-profit organization Built by a group of engineers who
+              recognized the importance of spreading knowledge and technology in
+              the world
+            </p>
           </div>
           <div class="img">
-            <img src="../Img/EG Section.png" alt="">
+            <img src="{% static 'img/EG Section.png' %}" alt="" />
           </div>
         </div>
 
         <div class="ieee_yp">
           <div class="img">
-            <img src="../Img/IEEE YP.png" alt="">
+            <img src="{% static 'img/IEEE YP.png' %}" alt="" />
           </div>
           <div class="text">
             <h2>IEEE Young Professionals</h2>
-            <p>IEEE is an IEEE affinity group that encourages the participation of young engineers in promoting the engineering community, fosters real communication between the university and the industry, and enhances the skills needed for better performance in the professional world. YP started in Egypt in 2002, and thanks to its fast and confident growth, it is now one of the most active affinity groups in IEEE Region 8, which includes Europe, Africa, and Middle East.</p>
+            <p>
+              IEEE is an IEEE affinity group that encourages the participation
+              of young engineers in promoting the engineering community, fosters
+              real communication between the university and the industry, and
+              enhances the skills needed for better performance in the
+              professional world. YP started in Egypt in 2002, and thanks to its
+              fast and confident growth, it is now one of the most active
+              affinity groups in IEEE Region 8, which includes Europe, Africa,
+              and Middle East.
+            </p>
           </div>
         </div>
       </section>
@@ -99,10 +113,10 @@
             </div>
             <div class="text">
               <p>
-                To be the leading force in fostering innovation within engineering
-                'Made in Egypt' aims to inspire and equip a generation of senior
-                students with the creativity and excellence to exceed market
-                expectations
+                To be the leading force in fostering innovation within
+                engineering 'Made in Egypt' aims to inspire and equip a
+                generation of senior students with the creativity and excellence
+                to exceed market expectations
               </p>
             </div>
           </div>
@@ -111,14 +125,17 @@
               <i class="fa-solid fa-eye"></i>
               <h2>Vision</h2>
             </div>
-          <div class="text">
-            <p>To be the leading force in fostering innovation within engineering 'Made in Egypt' aims to inspire and equip a generation of senior students with the creativity and excellence to exceed market expectations</p>
-          </div>
+            <div class="text">
+              <p>
+                To be the leading force in fostering innovation within
+                engineering 'Made in Egypt' aims to inspire and equip a
+                generation of senior students with the creativity and excellence
+                to exceed market expectations
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-
 
       <section class="meet_our_board">
         <div id="meet_our_board">
@@ -127,14 +144,14 @@
           </div>
           <div class="leads">
             <div class="lead">
-              <img src="../Img/Lead/Seif Mostafa.png" alt="">
+              <img src="{% static 'img/Lead/Seif Mostafa.png' %}" alt="" />
               <div class="text">
                 <h2>Seif Mostafa</h2>
                 <p>Chairman</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Mohamed Fahmy.jpeg" alt="" class="img">
+              <img src="{% static 'img/Lead/Mohamed Fahmy.jpeg' %}" alt="" />
               <!-- <img src="{% static 'img/Lead/Mohamed Fahmy.jpeg' %}"$3> -->
               <div class="text">
                 <h2>Mohmed Fahmy</h2>
@@ -142,14 +159,14 @@
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Ziad.png" alt="">
+              <img src="{% static 'img/Lead/Ziad.png' %}" alt="" />
               <div class="text">
                 <h2>Ziad Nasser</h2>
                 <p>Secretary</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Mahmoud elbahrawy.png" alt="">
+              <img src="{% static 'img/Lead/Mahmoud elbahrawy.png' %}" alt="" />
               <!-- <img src="{% static 'img/Lead/Mahmoud elbahrawy.jpeg' %}"$3> -->
               <div class="text">
                 <h2>Mahmoud Elbahrawy</h2>
@@ -157,56 +174,59 @@
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Sara.png" alt="">
+              <img src="{% static 'img/Lead/Sara.png' %}" alt="" />
               <div class="text">
                 <h2>Sara Jakoub</h2>
                 <p>Sponsorship Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/eman (1).png" alt="">
+              <img src="{% static 'img/Lead/eman (1).png' %}" alt="" />
               <div class="text">
                 <h2>Eman Elsharkawy</h2>
                 <p>Operations and Materials Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Ahmed Ezzat.png" alt="">
+              <img src="{% static 'img/Lead/Ahmed Ezzat.png' %}" alt="" />
               <div class="text">
                 <h2>Ahmed Ezzat</h2>
                 <p>Registration Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Alaa Kamal.png" alt="">
+              <img src="{% static 'img/Lead/Alaa Kamal.png' %}" alt="" />
               <div class="text">
                 <h2>Alaa Kamal</h2>
                 <p>Competition Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Abdelrahman.jpeg" alt="">
+              <img src="{% static 'img/Lead/Abdelrahman.jpeg' %}" alt="" />
               <div class="text">
                 <h2>Abdelrahman Sepaey</h2>
                 <p>HR Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Nour_Basel-removebg-preview (1).png" alt="">
+              <img
+                src="{% static 'img/Lead/Nour_Basel-removebg-preview (1).png' %}"
+                alt=""
+              />
               <div class="text">
                 <h2>Nour Basel</h2>
                 <p>Multimedia Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/Omar Alsaqaan.png" alt="">
+              <img src="{% static 'img/Lead/Omar Alsaqaan.png' %}" alt="" />
               <div class="text">
                 <h2>Omar Elsaqaan</h2>
                 <p>PR Lead</p>
               </div>
             </div>
             <div class="lead">
-              <img src="../Img/Lead/amina (1).png" alt="">
+              <img src="{% static 'img/Lead/amina (1).png' %}" alt="" />
               <div class="text">
                 <h2>Amina Elhendawy</h2>
                 <p>Marketing Lead</p>
@@ -215,8 +235,6 @@
           </div>
         </div>
       </section>
-
-      
     </main>
 
     <!-- =============Footer============ -->
@@ -244,11 +262,11 @@
           <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="../HTML/home.html">Home</a></li>
-              <li><a href="../HTML/about.html">About</a></li>
-              <li><a href="../HTML/competition.html">Competition</a></li>
-              <li><a href="../HTML/projects.html">Projects</a></li>
-              <li><a href="../HTML/contact.html">Contact</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="../about">About</a></li>
+              <li><a href="../competition">Competition</a></li>
+              <li><a href="../projects">Projects</a></li>
+              <li><a href="../contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -289,8 +307,5 @@
     <!-- ===============End Footer================ -->
 
     <!-- Font Awesome CDN for social media icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-    <script src="../main.js"></script>
   </body>
 </html>

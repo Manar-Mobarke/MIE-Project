@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,33 +11,32 @@
   <body>
     <!-- =========header========= -->
     <header>
-      <nav>
+      <nav id="nav-placeholder">
         <div class="nav-container">
           <div class="logo">
             <img src="{% static 'img/MIE-logo.png' %}" alt="Logo" />
           </div>
-          <ul class="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li>
-              <a href="/home" data-page="./front">Home</a>
+              <a href="/" data-page="/">Home</a>
             </li>
             <li>
-              <a href="./about" data-page="../about"
-                >About Us</a
-              >
+              <a href="../about" data-page="../about">About Us</a>
             </li>
             <li>
-              <a href="./projects" data-page="../projects"
-                >Projects</a
-              >
+              <a href="../projects" data-page="../projects">Projects</a>
             </li>
             <li>
-              <a href="./contact" data-page="../contact"
-                >Contact Us</a
-              >
+              <a href="../contact" data-page="../contact">Contact Us</a>
             </li>
           </ul>
           <div class="nav__button" id="nav-button">
             <input type="submit" value="Registration" />
+          </div>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </div>
       </nav>
@@ -52,7 +51,7 @@
       <div id="projects-container">
         <div class="project-sec">
           <div class="img">
-            <img src="{% static 'img/4152.png' %}"$3>
+            <img src="{% static 'img/4152.png' %}" $3 />
           </div>
           <div class="content">
             <h3>Automation</h3>
@@ -66,7 +65,7 @@
         </div>
         <div class="project-sec">
           <div class="img">
-            <img src="{% static 'img/4152.png' %}"$3>
+            <img src="{% static 'img/4152.png' %}" $3 />
           </div>
           <div class="content">
             <h3>Automation</h3>
@@ -80,7 +79,7 @@
         </div>
         <div class="project-sec">
           <div class="img">
-            <img src="{% static 'img/4152.png' %}"$3>
+            <img src="{% static 'img/4152.png' %}" $3 />
           </div>
           <div class="content">
             <h3>Automation</h3>
@@ -131,29 +130,29 @@
             <h3>Follow Us</h3>
             <div class="social-links">
               <a href="#"
-                  ><img
-                    height="30"
-                    width="30"
-                    src="{% static 'img/socail icons/facebook.png' %}"
-                    alt="facebook"
-                    style="filter: brightness(100) grayscale(1) invert(1)"
-                /></a>
-                <a href="#"
-                  ><img
-                    height="30"
-                    width="30"
-                    src="{% static 'img/socail icons/instagram.png' %}"
-                    alt="instagram"
-                    style="filter: brightness(100) grayscale(1) invert(1)"
-                /></a>
-                <a href="#"
-                  ><img
-                    height="30"
-                    width="30"
-                    src="{% static 'img/socail icons/linkedin.png' %}"
-                    alt="linkedin"
-                    style="filter: brightness(100) grayscale(1) invert(1)"
-                /></a>
+                ><img
+                  height="30"
+                  width="30"
+                  src="{% static 'img/socail icons/facebook.png' %}"
+                  alt="facebook"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="{% static 'img/socail icons/instagram.png' %}"
+                  alt="instagram"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="{% static 'img/socail icons/linkedin.png' %}"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
             </div>
           </div>
         </div>

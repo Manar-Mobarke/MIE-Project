@@ -24,3 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("nav-button").addEventListener("click", () => {
   window.location.href = "./registration";
 });
+
+// on click mobile-menu add/remove class .active from .nav-links
+document.getElementById("mobile-menu").addEventListener("click", () => {
+  document.getElementById("nav-links").classList.toggle("active");
+});

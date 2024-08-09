@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/Registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Registration.css' %}" />
     <title>Registration</title>
     <script>
       document.documentElement.className = "js";
@@ -27,83 +27,82 @@
       supportsCssVars() || alert("");
 
       function submitForm() {
-    var form = document.getElementById("ajax-form");
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", form.action, true);
-    
-    // Get the CSRF token from the cookie
-    var csrftoken = getCookie('csrftoken');
-    
-    // Set the CSRF token in the header
-    xhr.setRequestHeader("X-CSRFToken", csrftoken);
-    
-    xhr.onload = function () {
-        if (xhr.status === 200) {
+        var form = document.getElementById("ajax-form");
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action, true);
+
+        // Get the CSRF token from the cookie
+        var csrftoken = getCookie("csrftoken");
+
+        // Set the CSRF token in the header
+        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
             console.log(xhr.responseText);
             // Handle successful response
-        } else {
+          } else {
             console.error("Error submitting form:", xhr.statusText);
             // Handle error
-        }
-    };
-    xhr.onerror = function() {
-        console.error("Network error occurred");
-        // Handle network error
-    };
-    xhr.send(formData);
-}
+          }
+        };
+        xhr.onerror = function () {
+          console.error("Network error occurred");
+          // Handle network error
+        };
+        xhr.send(formData);
+      }
 
-// Function to get CSRF token from cookie
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
+      // Function to get CSRF token from cookie
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          var cookies = document.cookie.split(";");
+          for (var i = 0; i < cookies.length; i++) {
             var cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
             }
+          }
         }
-    }
-    return cookieValue;
-}
+        return cookieValue;
+      }
     </script>
     <script src="{%static 'js/main.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/about.css' %}" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="nav-placeholder">
         <div class="nav-container">
           <div class="logo">
             <img src="{% static 'img/MIE-logo.png' %}" alt="Logo" />
           </div>
-          <ul class="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li>
-              <a href="/home" data-page="./front">Home</a>
+              <a href="/" data-page="/">Home</a>
             </li>
             <li>
-              <a href="./about" data-page="../about"
-                >About Us</a
-              >
+              <a href="../about" data-page="../about">About Us</a>
             </li>
             <li>
-              <a
-                href="../competition"
-                data-page="../competition"
-                >Competition</a
-              >
+              <a href="../projects" data-page="../projects">Projects</a>
             </li>
             <li>
-              <a href="./projects" data-page="../projects"
-                >Projects</a
-              >
+              <a href="../contact" data-page="../contact">Contact Us</a>
             </li>
           </ul>
           <div class="nav__button" id="nav-button">
             <input type="submit" value="Registration" />
+          </div>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </div>
       </nav>
@@ -124,7 +123,7 @@ function getCookie(name) {
         method="post"
         enctype="multipart/form-data"
       >
-      {% csrf_token %}
+        {% csrf_token %}
         <label for="name">Project name:</label>
         <input type="text" name="name" id="name" placeholder="Name" />
 
@@ -144,74 +143,74 @@ function getCookie(name) {
       </form>
     </div>
 
-        <!-- ==========Footer========= -->
-        <footer class="footer">
-          <div class="footer-container">
-            <div class="footer-row">
-              <div class="footer-column">
-                <h3>About Us</h3>
-                <p>
-                  MIE was founded in 2006, and over the years we have sustained our
-                  theme to provide graduation projects, but we have also developed
-                  the theme criteria, which is the tracks of every season. We ensure
-                  that the tracks are scoped with the year held, and with this
-                  sustainability, we have reached every country in Egypt.
-                </p>
-              </div>
-              <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                  <li>Email: contact@company.com</li>
-                  <li>Phone: +123 456 7890</li>
-                  <li>Address: 123 Street Name, City, Country</li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                  <li><a href="/home">Home</a></li>
-                  <li><a href="./about">About</a></li>
-                  <li><a href="./competition">Competition</a></li>
-                  <li><a href="./projects">Projects</a></li>
-                  <li><a href="./contact">Contact</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                  <a href="#"
-                    ><img
-                      height="30"
-                      width="30"
-                      src="../Img/socail icons/facebook.png"
-                      alt="facebook"
-                      style="filter: brightness(100) grayscale(1) invert(1)"
-                  /></a>
-                  <a href="#"
-                    ><img
-                      height="30"
-                      width="30"
-                      src="../Img/socail icons/instagram.png"
-                      alt="instagram"
-                      style="filter: brightness(100) grayscale(1) invert(1)"
-                  /></a>
-                  <a href="#"
-                    ><img
-                      height="30"
-                      width="30"
-                      src="../Img/socail icons/linkedin.png"
-                      alt="linkedin"
-                      style="filter: brightness(100) grayscale(1) invert(1)"
-                  /></a>
-                </div>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>&copy; MIE'24 All Rights Reserved.</p>
+    <!-- ==========Footer========= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              MIE was founded in 2006, and over the years we have sustained our
+              theme to provide graduation projects, but we have also developed
+              the theme criteria, which is the tracks of every season. We ensure
+              that the tracks are scoped with the year held, and with this
+              sustainability, we have reached every country in Egypt.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: contact@company.com</li>
+              <li>Phone: +123 456 7890</li>
+              <li>Address: 123 Street Name, City, Country</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/home">Home</a></li>
+              <li><a href="./about">About</a></li>
+              <li><a href="./competition">Competition</a></li>
+              <li><a href="./projects">Projects</a></li>
+              <li><a href="./contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/facebook.png"
+                  alt="facebook"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/instagram.png"
+                  alt="instagram"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
+              <a href="#"
+                ><img
+                  height="30"
+                  width="30"
+                  src="../Img/socail icons/linkedin.png"
+                  alt="linkedin"
+                  style="filter: brightness(100) grayscale(1) invert(1)"
+              /></a>
             </div>
           </div>
-        </footer>
-        <!-- =========End Footer======= -->
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; MIE'24 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- =========End Footer======= -->
     <!-- JAVASCRIPT
 ================================================== -->
     <script src="js/jquery.min.js" defer></script>
